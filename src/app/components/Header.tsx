@@ -11,10 +11,9 @@ export default function Header() {
           The guide to launching your successful startup.
         </h1>
         <p className='text-lg max-w-xl text-pretty text-center opacity-80'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo assumenda
-          perferendis est modi, aliquid distinctio, omnis accusamus autem,
-          placeat perspiciatis rem reiciendis minima minus! Qui explicabo fugit
-          placeat necessitatibus molestiae.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo assumenda perferendis est
+          modi, aliquid distinctio, omnis accusamus autem, placeat perspiciatis rem reiciendis
+          minima minus! Qui explicabo fugit placeat necessitatibus molestiae.
         </p>
         <Chip
           color='default'
