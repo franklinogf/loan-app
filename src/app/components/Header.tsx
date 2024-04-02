@@ -1,5 +1,5 @@
 import { Chip } from '@nextui-org/react'
-import { MainMenu } from './MainMenu'
+import { MainMenu } from '@/components/MainMenu'
 
 export default function Header() {
   return (

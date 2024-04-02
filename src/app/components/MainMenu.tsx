@@ -1,5 +1,5 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@nextui-org/react'
-import { LoginButton } from './LoginButton'
+import { LoginButton } from '@/components/LoginButton'
 
 export function MainMenu() {
   return (
