@@ -10,12 +10,14 @@ import {
   useDisclosure
 } from '@nextui-org/react'
 import { IconEye, IconEyeOff } from '@tabler/icons-react'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 export function LoginButton() {
-  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure()
+  const { isOpen, onOpen, onOpenChange } = useDisclosure()
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
   const [credentials, setCredentials] = useState({ email: '', password: '' })
+  const router = useRouter()
 
   const togglePasswordVisibility = () => setIsPasswordVisible(!isPasswordVisible)
 
@@ -29,7 +31,7 @@ export function LoginButton() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    onClose()
+    router.push('/dashboard')
   }
   return (
     <>
