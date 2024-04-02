@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix"
+    "lint": "next lint --fix",
+    "format": "prettier ./src/ -w --cache"
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.10",
