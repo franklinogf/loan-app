@@ -13,7 +13,7 @@ import { IconEye, IconEyeOff } from '@tabler/icons-react'
 import { useState } from 'react'
 
 export function LoginButton() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure({ isOpen: true })
+  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure()
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
   const [credentials, setCredentials] = useState({ email: '', password: '' })
 
@@ -29,7 +29,7 @@ export function LoginButton() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log({ credentials })
+    onClose()
   }
   return (
     <>
