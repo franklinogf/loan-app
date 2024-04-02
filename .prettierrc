@@ -9,5 +9,6 @@
   "bracketSameLine": false,
   "quoteProps": "as-needed",
   "tabWidth": 2,
-  "endOfLine": "lf"
+  "endOfLine": "auto"
 }
+
