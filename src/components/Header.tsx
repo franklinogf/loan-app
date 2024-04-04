@@ -1,4 +1,4 @@
-import { Chip } from '@nextui-org/react'
+import { Badge } from '@chakra-ui/react'
 import { MainMenu } from '@/components/MainMenu'
 
 export default function Header() {
@@ -6,7 +6,7 @@ export default function Header() {
     <header>
       <MainMenu />
       <section className='flex flex-col items-center gap-y-10 mt-20'>
-        <Chip color='primary'>TRUSTED BY OVER +55,000</Chip>
+        <Badge>TRUSTED BY OVER +55,000</Badge>
         <h1 className='font-bold text-5xl max-w-xl text-center text-balance'>
           The guide to launching your successful startup.
         </h1>
@@ -15,12 +15,7 @@ export default function Header() {
           modi, aliquid distinctio, omnis accusamus autem, placeat perspiciatis rem reiciendis
           minima minus! Qui explicabo fugit placeat necessitatibus molestiae.
         </p>
-        <Chip
-          color='default'
-          className='text-md'
-        >
-          No Credit Card Required . Cancel Anytime
-        </Chip>
+        <Badge colorScheme='secondary'>No Credit Card Required . Cancel Anytime</Badge>
       </section>
     </header>
   )
