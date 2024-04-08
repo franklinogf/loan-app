@@ -1,7 +1,7 @@
 import { LoginButtonWithModal } from '@/components/LoginButtonWithModal'
 import { Box, Flex, IconButton, useDisclosure } from '@chakra-ui/react'
 import { IconMenu2, IconX } from '@tabler/icons-react'
-import { Logo } from './Logo'
+import { Logo } from '@/components/Logo'
 
 export function MainMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure()
