@@ -9,7 +9,7 @@ export function MainMenu() {
     <Box
       zIndex={1}
       as='nav'
-      px={4}
+      px={[2, 4]}
       borderBottom='2px'
       position='sticky'
       top={0}
@@ -24,7 +24,7 @@ export function MainMenu() {
           size='md'
           justifyContent='center'
           icon={isOpen ? <IconX /> : <IconMenu2 />}
-          aria-label='Open Menu'
+          aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
           display={['flex', 'none']}
           onClick={isOpen ? onClose : onOpen}
         />
