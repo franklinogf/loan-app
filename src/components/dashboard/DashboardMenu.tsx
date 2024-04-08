@@ -1,85 +1,49 @@
-import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-  Link,
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle
-} from '@nextui-org/react'
+'use client'
+import { Avatar, Box, Flex, Icon, IconButton, useDisclosure } from '@chakra-ui/react'
+import { IconMenu2, IconUserSquareRounded, IconX } from '@tabler/icons-react'
+import { Logo } from '@/components/Logo'
+
 export function DashboardMenu() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
-    <Navbar
-      maxWidth='full'
-      isBordered
+    <Box
+      zIndex={1}
+      as='nav'
+      px={[2, 4]}
+      borderBottom='2px'
+      position='sticky'
+      top={0}
+      bgColor='white'
     >
-      <NavbarContent
-        className='sm:hidden pr-3'
-        justify='start'
+      <Flex
+        h={16}
+        alignItems='center'
+        justifyContent='space-between'
       >
-        <NavbarMenuToggle />
-        <NavbarBrand>
-          <p className='font-bold text-inherit'>SimpleLoad</p>
-        </NavbarBrand>
-      </NavbarContent>
+        <IconButton
+          size='md'
+          justifyContent='center'
+          icon={isOpen ? <IconX /> : <IconMenu2 />}
+          aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
+          display={['flex', 'none']}
+          onClick={isOpen ? onClose : onOpen}
+        />
+        <Box>
+          <Logo />
+        </Box>
 
-      <NavbarContent
-        className='hidden sm:flex'
-        justify='start'
-      >
-        <NavbarBrand>
-          <p className='font-bold text-inherit'>SimpleLoad</p>
-        </NavbarBrand>
-      </NavbarContent>
-
-      <NavbarContent justify='center'>
-        <NavbarItem>
-          <Dropdown>
-            <DropdownTrigger>
-              <Button variant='bordered'>Open Menu</Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label='Static Actions'>
-              <DropdownItem key='new'>New file</DropdownItem>
-              <DropdownItem key='copy'>Copy link</DropdownItem>
-              <DropdownItem key='edit'>Edit file</DropdownItem>
-              <DropdownItem
-                key='delete'
-                className='text-danger'
-                color='danger'
-              >
-                Delete file
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarMenu>
-        <NavbarMenuItem>
-          <Link
-            className='w-full'
-            href='#'
-            size='lg'
-          >
-            link
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link
-            className='w-full'
-            href='#'
-            size='lg'
-          >
-            link
-          </Link>
-        </NavbarMenuItem>
-      </NavbarMenu>
-    </Navbar>
+        <Avatar
+          bg='primary.500'
+          icon={
+            <Icon
+              fontSize='2.5rem'
+              color='gray.700'
+              as={IconUserSquareRounded}
+            />
+          }
+        />
+      </Flex>
+    </Box>
   )
 }
