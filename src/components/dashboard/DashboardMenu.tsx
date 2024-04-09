@@ -3,7 +3,6 @@ import {
   Avatar,
   Box,
   Flex,
-  Icon,
   IconButton,
   useDisclosure,
   Drawer,
@@ -11,9 +10,13 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton
+  DrawerCloseButton,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem
 } from '@chakra-ui/react'
-import { IconMenu2, IconUserSquareRounded, IconX } from '@tabler/icons-react'
+import { IconMenu2, IconX } from '@tabler/icons-react'
 import { Logo } from '@/components/Logo'
 import { useRef } from 'react'
 import { DashboardAsideMenu } from '@/components/dashboard/DashboardAsideMenu'
@@ -51,17 +54,15 @@ export function DashboardMenu() {
           <Box>
             <Logo />
           </Box>
-
-          <Avatar
-            bg='primary.500'
-            icon={
-              <Icon
-                fontSize='2.5rem'
-                color='gray.700'
-                as={IconUserSquareRounded}
-              />
-            }
-          />
+          <Menu>
+            <MenuButton
+              size='sm'
+              as={Avatar}
+            />
+            <MenuList>
+              <MenuItem>Cerrar sesión</MenuItem>
+            </MenuList>
+          </Menu>
         </Flex>
       </Box>
       <Drawer
