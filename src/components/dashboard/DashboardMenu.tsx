@@ -20,7 +20,7 @@ import { DashboardAsideMenu } from '@/components/dashboard/DashboardAsideMenu'
 
 export function DashboardMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = useRef()
+  const btnRef = useRef(null)
 
   return (
     <>
@@ -28,7 +28,8 @@ export function DashboardMenu() {
         zIndex={1}
         as='nav'
         px={[2, 4]}
-        borderBottom='2px'
+        borderBottom='1px'
+        className='!border-gray-200'
         position='sticky'
         top={0}
         bgColor='white'
