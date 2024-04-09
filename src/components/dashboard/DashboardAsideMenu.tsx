@@ -1,21 +1,13 @@
 'use client'
 import { Button, List, ListItem } from '@chakra-ui/react'
-import {
-  IconBuildingStore,
-  IconDashboard,
-  IconInbox,
-  IconTriangleSquareCircle,
-  IconUsers
-} from '@tabler/icons-react'
+import { IconHome, IconInbox, IconUsers } from '@tabler/icons-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const menuItems = [
-  { label: 'Dashboard', href: '/dashboard', icon: <IconDashboard /> },
-  { label: 'Kanban', href: '/kanban', icon: <IconTriangleSquareCircle /> },
-  { label: 'Mensajes', href: '/inbox', icon: <IconInbox /> },
-  { label: 'Usuarios', href: '/users', icon: <IconUsers /> },
-  { label: 'Productos', href: '/products', icon: <IconBuildingStore /> }
+  { label: 'Inicio', href: '/dashboard', icon: <IconHome /> },
+  { label: 'Clientes', href: '/dashboard/clients', icon: <IconUsers /> },
+  { label: 'Prestamos', href: '/loans', icon: <IconInbox /> }
 ]
 export function DashboardAsideMenu() {
   const pathname = usePathname()
