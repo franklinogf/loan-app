@@ -8,7 +8,8 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  useDisclosure
+  useDisclosure,
+  Input
 } from '@chakra-ui/react'
 import { IconPlus } from '@tabler/icons-react'
 export function NewClientButton() {
@@ -28,9 +29,16 @@ export function NewClientButton() {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>Agregue los datos del cliente.</ModalHeader>
           <ModalCloseButton />
-          <ModalBody />
+          <ModalBody>
+            <section className='space-y-3'>
+              <Input placeholder='Nombre' />
+              <Input placeholder='Correo' />
+              <Input placeholder='Cedula' />
+              <Input placeholder='Telefono' />
+            </section>
+          </ModalBody>
 
           <ModalFooter>
             <Button
@@ -40,7 +48,7 @@ export function NewClientButton() {
             >
               Close
             </Button>
-            <Button variant='ghost'>Secondary Action</Button>
+            <Button variant='ghost'>Guardar</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
